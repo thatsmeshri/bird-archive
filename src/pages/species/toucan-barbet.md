@@ -1,4 +1,5 @@
 ---
+templateKey: species-page
 title: Toucan Barbet
 country: Colombia
 location: Avistamiento de aves Doña Dora - km 55, Buenaventura, Dagua, Valle del
