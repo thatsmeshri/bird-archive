@@ -16,7 +16,9 @@ export default function SpeciesIndex({ data }) {
         {posts.map(post => (
           <Link
             key={post.id}
-            to={post.fields.slug}
+            to={`/species/${post.frontmatter.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}/`}
             style={{
               textDecoration: "none",
               color: "black",
