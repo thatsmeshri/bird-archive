@@ -45,13 +45,10 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "species-page" } } }
-      sort: { frontmatter: { title: ASC } }
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       nodes {
         id
-        fields {
-          slug
-        }
         frontmatter {
           title
           country
