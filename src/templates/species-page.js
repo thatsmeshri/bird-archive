@@ -10,7 +10,7 @@ export default function SpeciesPage({ data }) {
 
       {post.frontmatter.image && (
         <img
-          src={post.frontmatter.image}
+          src={post.frontmatter.image.publicURL}
           alt={post.frontmatter.title}
           style={{ width: "100%", marginBottom: "20px" }}
         />
@@ -32,7 +32,9 @@ export const query = graphql`
         title
         country
         location
-        image
+        image {
+          publicURL
+        }
       }
     }
   }
